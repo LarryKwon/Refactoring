@@ -1,6 +1,6 @@
 package ch01.refactoring;
 
-import ch01.example.Movie;
+import ch01.refactoring.Movie;
 
 public class Rental {
 

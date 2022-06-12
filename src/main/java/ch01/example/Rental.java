@@ -1,5 +1,6 @@
 package ch01.example;
 
+
 public class Rental {
 
     private Movie _movie;

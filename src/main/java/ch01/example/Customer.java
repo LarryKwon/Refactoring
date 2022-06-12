@@ -37,7 +37,7 @@ public class Customer {
             //비디오 종류별 대여료 계산
             switch (each.getMovie().getPriceCode()) {
                 case Movie.REGULAR:
-                    thisAmount += 1;
+                    thisAmount += 2;
                     if (each.getDaysRented() > 2) {
                         thisAmount += (each.getDaysRented() - 2) * 1.5;
                     }

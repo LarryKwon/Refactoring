@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="972d8997-18a5-470f-8ba9-3ec98a729b06" name="Changes" comment="기존 코드와 Refactoring 후의 코드가 같은 행동을 하는지 테스트 작성&#10;&#10;Customer.java&#10;-&gt; 자신의 정보를 바탕으로 totalCharge를 계산하는 질의 메서드&#10;-&gt; 자신의 정보를 바탕으로 totalFrequentRenterPoints를 계산하는 질의 메서드&#10;-&gt; totalAmount와 totalFrequent 라는 임시 변수 삭제&#10;-&gt; 자신의 정보를 활용하는 메서드를 짜든가, 아니라면 남에게 위임해야함(getCharge)">
+    <list default="true" id="972d8997-18a5-470f-8ba9-3ec98a729b06" name="Changes" comment="Rental.java에 있는 getCharge 메서드를 살펴봤을 때,Movie의 정보를 활용한다.&#10;남의 정보를 가지고 switch문의 인자로 사용하는 것은 좋지 않다.&#10;왜냐하면 남의 정보가 변경되면 switch문을 들고 있는 클래스까지 변경이 전파되기 때문임.&#10;따라서 daysRented를 인자로 넘기고 charge를 받는 것이 낫다.(정보 전문가에게 위임하자)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/ChildrenPrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/NewReleasePrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Price.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/RegularPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/example/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/example/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch01/example/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/example/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/example/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/example/Rental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Rental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch01/example/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/example/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ch01/example/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/example/Movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch01/example/Rental.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/example/Rental.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ch01/refactoring/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/refactoring/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ch01/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ch01/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +164,7 @@
       <workItem from="1654708054706" duration="2675000" />
       <workItem from="1654795330116" duration="301000" />
       <workItem from="1654795812241" duration="235000" />
-      <workItem from="1654796054861" duration="8312000" />
+      <workItem from="1654796054861" duration="11586000" />
     </task>
     <task id="LOCAL-00001" summary="first Commit&#10;- 1장에 있는 예제 코드&#10;- 리팩터링 &#10;- 기존 코드의 문제점, HTML로 형식을 변환하거나 가격 계산 방식이 달라지면 비슷한 거를 또 만들어야한다!&#10;- 일단 단위화할 수 있는 부분을 찾자 -&gt; switch case 문을 함수로 만들어서 추출">
       <created>1654800627687</created>
@@ -169,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654996023767</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Rental.java에 있는 getCharge 메서드를 살펴봤을 때,Movie의 정보를 활용한다.&#10;남의 정보를 가지고 switch문의 인자로 사용하는 것은 좋지 않다.&#10;왜냐하면 남의 정보가 변경되면 switch문을 들고 있는 클래스까지 변경이 전파되기 때문임.&#10;따라서 daysRented를 인자로 넘기고 charge를 받는 것이 낫다.(정보 전문가에게 위임하자)">
+      <created>1654996392177</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654996392177</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +208,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first Commit&#10;- 1장에 있는 예제 코드&#10;- 리팩터링 &#10;- 기존 코드의 문제점, HTML로 형식을 변환하거나 가격 계산 방식이 달라지면 비슷한 거를 또 만들어야한다!&#10;- 일단 단위화할 수 있는 부분을 찾자 -&gt; switch case 문을 함수로 만들어서 추출" />
     <MESSAGE value="기존 코드와 Refactoring 후의 코드가 같은 행동을 하는지 테스트 작성&#10;&#10;Customer.java&#10;-&gt; 자신의 정보를 바탕으로 totalCharge를 계산하는 질의 메서드&#10;-&gt; 자신의 정보를 바탕으로 totalFrequentRenterPoints를 계산하는 질의 메서드&#10;-&gt; totalAmount와 totalFrequent 라는 임시 변수 삭제&#10;-&gt; 자신의 정보를 활용하는 메서드를 짜든가, 아니라면 남에게 위임해야함(getCharge)" />
-    <option name="LAST_COMMIT_MESSAGE" value="기존 코드와 Refactoring 후의 코드가 같은 행동을 하는지 테스트 작성&#10;&#10;Customer.java&#10;-&gt; 자신의 정보를 바탕으로 totalCharge를 계산하는 질의 메서드&#10;-&gt; 자신의 정보를 바탕으로 totalFrequentRenterPoints를 계산하는 질의 메서드&#10;-&gt; totalAmount와 totalFrequent 라는 임시 변수 삭제&#10;-&gt; 자신의 정보를 활용하는 메서드를 짜든가, 아니라면 남에게 위임해야함(getCharge)" />
+    <MESSAGE value="Rental.java에 있는 getCharge 메서드를 살펴봤을 때,Movie의 정보를 활용한다.&#10;남의 정보를 가지고 switch문의 인자로 사용하는 것은 좋지 않다.&#10;왜냐하면 남의 정보가 변경되면 switch문을 들고 있는 클래스까지 변경이 전파되기 때문임.&#10;따라서 daysRented를 인자로 넘기고 charge를 받는 것이 낫다.(정보 전문가에게 위임하자)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rental.java에 있는 getCharge 메서드를 살펴봤을 때,Movie의 정보를 활용한다.&#10;남의 정보를 가지고 switch문의 인자로 사용하는 것은 좋지 않다.&#10;왜냐하면 남의 정보가 변경되면 switch문을 들고 있는 클래스까지 변경이 전파되기 때문임.&#10;따라서 daysRented를 인자로 넘기고 charge를 받는 것이 낫다.(정보 전문가에게 위임하자)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
