@@ -1,7 +1,7 @@
 package ch01.example;
 
 import ch01.example.Movie;
-import ch01.example.Rental;
+import ch01.refactoring.Rental;
 import ch01.refactoring.Customer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Assertions;
@@ -13,8 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Main {
 
-    Customer test1;
-    Customer test2;
+    ch01.example.Customer before;
+    Customer after;
     Customer test3;
 
     Movie movie1;
@@ -23,9 +23,6 @@ public class Main {
 
     @BeforeEach
      public void setup(){
-        test1 = new Customer("test1");
-        test2 = new Customer("test2");
-        test3 = new Customer("test3");
 
         movie1 = new Movie("movie1", 0);
         movie2 = new Movie("movie2", 1);
@@ -33,14 +30,17 @@ public class Main {
     }
 
     @Test()
-    public void test1(){
-        ArrayList<Rental> rentalsOfCustomer1 = new ArrayList<>();
-        rentalsOfCustomer1.add(new Rental(movie1, 3));
-        rentalsOfCustomer1.add(new Rental(movie2, 1));
-        rentalsOfCustomer1.add(new Rental(movie3, 2));
+    public void validRefacotor(){
+        before = new ch01.example.Customer("test1");
+        after = new Customer("test1");
 
-        for (Rental rental : rentalsOfCustomer1) {
-            test1.addRental(rental);
+        ArrayList<ch01.example.Rental> rentalsOfCustomer1 = new ArrayList<>();
+        rentalsOfCustomer1.add(new ch01.example.Rental(movie1, 3));
+        rentalsOfCustomer1.add(new ch01.example.Rental(movie2, 1));
+        rentalsOfCustomer1.add(new ch01.example.Rental(movie3, 2));
+
+        for (ch01.example.Rental rental : rentalsOfCustomer1) {
+            before.addRental(rental);
         }
 
         ArrayList<Rental> rentalsOfCustomer2 = new ArrayList<>();
@@ -48,11 +48,9 @@ public class Main {
         rentalsOfCustomer2.add(new Rental(movie2, 1));
         rentalsOfCustomer2.add(new Rental(movie3, 2));
         for (Rental rental : rentalsOfCustomer2) {
-            test2.addRental(rental);
+            after.addRental(rental);
         }
 
-        assertEquals(test1.statement(), test2.statement());
+        assertEquals(before.statement(), after.statement());
     }
-
-
 }

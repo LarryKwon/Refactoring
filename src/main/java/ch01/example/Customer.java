@@ -29,8 +29,7 @@ public class Customer {
         double totalAmount = 0;
         int frequentRentalPoints = 0;
         Enumeration rentals = _rentals.elements();
-//        String result = getName() + " 고객님의 대여기록 \n";
-        String result = "";
+        String result = getName() + " 고객님의 대여기록 \n";
         while (rentals.hasMoreElements()) {
             double thisAmount = 0;
             Rental each = (Rental) rentals.nextElement();

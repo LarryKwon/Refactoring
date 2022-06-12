@@ -1,7 +1,6 @@
 package ch01.refactoring;
 
 import ch01.example.Movie;
-import ch01.example.Rental;
 
 import java.util.Enumeration;
 import java.util.Vector;
@@ -29,55 +28,49 @@ public class Customer {
         대여료 적용 규칙을 수정한다면>? -> 똑같이 만든 클래스를 같이 수정해야한다.
      */
     public String statement() {
-        double totalAmount = 0;
-        int frequentRentalPoints = 0;
+        int frequentRenterPoints = 0;
         Enumeration rentals = _rentals.elements();
-//        String result = getName() + " 고객님의 대여기록 \n";
-        String result = "";
+        String result = getName() + " 고객님의 대여기록 \n";
         while (rentals.hasMoreElements()) {
-            double thisAmount = 0;
             Rental each = (Rental) rentals.nextElement();
-
-            thisAmount = amountFor(each);
-
-            //적립 포인트 1 증가
-            frequentRentalPoints++;
-            //최신물 이틀 이상 대여하면 보너스 포인트
-            if (each.getMovie().getPriceCode() == Movie.NEW_RELEASE && each.getDaysRented() > 1) frequentRentalPoints++;
+            frequentRenterPoints += each.getFrequentRenterPoints();
             // 이번에 대여하는 비디오 정보와 대여료 출력
-            result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(thisAmount) + "\n";
-            //현재까지 누적된 총 대여료
-            totalAmount += thisAmount;
+            result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(each.getCharge()) + "\n";
         }
         //푸터 행
-        result += "누적 대여로: " + String.valueOf(totalAmount) + "\n";
-        result += "적립 포인트: " + String.valueOf(frequentRentalPoints);
+        result += "누적 대여로: " + String.valueOf(getTotalCharge()) + "\n";
+        result += "적립 포인트: " + String.valueOf(getTotalFrequentRenterPoints());
         return result;
     }
 
-    /*
-    기존의 switch 문을 메서드로 추출
-    변수명을 수정
-    each -> aRental
-    thisAmount => result
-     */
-    private double amountFor(Rental aRental) {
+    public String htmlStatement() {
+        Enumeration rentals = _rentals.elements();
+        String result = "<H1><EM>" + getName() + " 고객 님의 대여 기록 </EM></H1><P>\n";
+        while (rentals.hasMoreElements()) {
+            Rental each = (Rental) rentals.nextElement();
+            result += each.getMovie().getTitle() + ": " + String.valueOf(each.getCharge()) + "<BR>\n";
+        }
+        result += "<P>누적 대여료: <EM>" + String.valueOf(getTotalCharge()) + "</EM><P>\n";
+        result += "적립 포인트: <EM>" + String.valueOf(getTotalFrequentRenterPoints()) + "</EM><P>";
+        return result;
+    }
+
+    private double getTotalCharge() {
         double result = 0;
-        //비디오 종류별 대여료 계산
-        switch (aRental.getMovie().getPriceCode()) {
-            case Movie.REGULAR:
-                result += 1;
-                if (aRental.getDaysRented() > 2) {
-                    result += (aRental.getDaysRented() - 2) * 1.5;
-                }
-                break;
-            case Movie.NEW_RELEASE:
-                result += aRental.getDaysRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                result += 1.5;
-                if (aRental.getDaysRented() > 3) result += (aRental.getDaysRented() - 3) * 1.5;
-                break;
+        Enumeration rentals = _rentals.elements();
+        while (rentals.hasMoreElements()) {
+            Rental each = (Rental) rentals.nextElement();
+            result += each.getCharge();
+        }
+        return result;
+    }
+
+    private int getTotalFrequentRenterPoints() {
+        int result = 0;
+        Enumeration rentals = _rentals.elements();
+        while (rentals.hasMoreElements()) {
+            Rental each = (Rental) rentals.nextElement();
+            result += each.getFrequentRenterPoints();
         }
         return result;
     }

@@ -1,0 +1,48 @@
+package ch01.refactoring;
+
+import ch01.example.Movie;
+
+public class Rental {
+
+    private Movie _movie;
+    private int _DaysRented;
+
+    public Rental(Movie _movie, int _DaysRented) {
+        this._movie = _movie;
+        this._DaysRented = _DaysRented;
+    }
+
+    public Movie getMovie() {
+        return _movie;
+    }
+
+    public int getDaysRented() {
+        return _DaysRented;
+    }
+
+    public double getCharge() {
+        double result = 0;
+        //비디오 종류별 대여료 계산
+        switch (getMovie().getPriceCode()) {
+            case Movie.REGULAR:
+                result += 1;
+                if (this.getDaysRented() > 2) {
+                    result += (getDaysRented() - 2) * 1.5;
+                }
+                break;
+            case Movie.NEW_RELEASE:
+                result += getDaysRented() * 3;
+                break;
+            case Movie.CHILDRENS:
+                result += 1.5;
+                if (getDaysRented() > 3) result += (getDaysRented() - 3) * 1.5;
+                break;
+        }
+        return result;
+    }
+
+    int getFrequentRenterPoints(){
+        if (getMovie().getPriceCode() == Movie.NEW_RELEASE && getDaysRented() > 1) return 2;
+        return 1;
+    }
+}

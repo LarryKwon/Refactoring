@@ -4,41 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="972d8997-18a5-470f-8ba9-3ec98a729b06" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_6_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_0_M1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactoring.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.6.0-M1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.6.0-M1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.6.0-M1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.6.0-M1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.2.0-M1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.6.0-M1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.6.0-M1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/example/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/example/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/example/Rental.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ch01/example/Main.java" afterDir="false" />
+    <list default="true" id="972d8997-18a5-470f-8ba9-3ec98a729b06" name="Changes" comment="first Commit&#10;- 1장에 있는 예제 코드&#10;- 리팩터링 &#10;- 기존 코드의 문제점, HTML로 형식을 변환하거나 가격 계산 방식이 달라지면 비슷한 거를 또 만들어야한다!&#10;- 일단 단위화할 수 있는 부분을 찾자 -&gt; switch case 문을 함수로 만들어서 추출">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Rental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/example/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/example/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch01/example/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/example/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch01/refactoring/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/refactoring/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ch01/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ch01/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +57,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.32845187",
@@ -92,8 +68,11 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ch01.example" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ch01.refactoring" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.Main.test1 (1)">
+  <component name="RunManager" selected="JUnit.Main.validRefacotor">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Refactoring" />
@@ -142,10 +121,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main.validRefacotor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Refactoring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch01.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch01.example" />
+      <option name="MAIN_CLASS_NAME" value="ch01.example.Main" />
+      <option name="METHOD_NAME" value="validRefacotor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Main.test1 (1)" />
+        <item itemvalue="JUnit.Main.validRefacotor" />
         <item itemvalue="JUnit.Main.test1" />
+        <item itemvalue="JUnit.Main.test1 (1)" />
         <item itemvalue="JUnit.Main" />
       </list>
     </recent_temporary>
@@ -161,8 +157,16 @@
       <workItem from="1654708054706" duration="2675000" />
       <workItem from="1654795330116" duration="301000" />
       <workItem from="1654795812241" duration="235000" />
-      <workItem from="1654796054861" duration="4324000" />
+      <workItem from="1654796054861" duration="7683000" />
     </task>
+    <task id="LOCAL-00001" summary="first Commit&#10;- 1장에 있는 예제 코드&#10;- 리팩터링 &#10;- 기존 코드의 문제점, HTML로 형식을 변환하거나 가격 계산 방식이 달라지면 비슷한 거를 또 만들어야한다!&#10;- 일단 단위화할 수 있는 부분을 찾자 -&gt; switch case 문을 함수로 만들어서 추출">
+      <created>1654800627687</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654800627687</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +185,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="first Commit&#10;- 1장에 있는 예제 코드&#10;- 리팩터링 &#10;- 기존 코드의 문제점, HTML로 형식을 변환하거나 가격 계산 방식이 달라지면 비슷한 거를 또 만들어야한다!&#10;- 일단 단위화할 수 있는 부분을 찾자 -&gt; switch case 문을 함수로 만들어서 추출" />
+    <option name="LAST_COMMIT_MESSAGE" value="first Commit&#10;- 1장에 있는 예제 코드&#10;- 리팩터링 &#10;- 기존 코드의 문제점, HTML로 형식을 변환하거나 가격 계산 방식이 달라지면 비슷한 거를 또 만들어야한다!&#10;- 일단 단위화할 수 있는 부분을 찾자 -&gt; switch case 문을 함수로 만들어서 추출" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
