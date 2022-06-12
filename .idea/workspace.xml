@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="972d8997-18a5-470f-8ba9-3ec98a729b06" name="Changes" comment="Rental.java에 있는 getCharge 메서드를 살펴봤을 때,Movie의 정보를 활용한다.&#10;남의 정보를 가지고 switch문의 인자로 사용하는 것은 좋지 않다.&#10;왜냐하면 남의 정보가 변경되면 switch문을 들고 있는 클래스까지 변경이 전파되기 때문임.&#10;따라서 daysRented를 인자로 넘기고 charge를 받는 것이 낫다.(정보 전문가에게 위임하자)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/ChildrenPrice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/NewReleasePrice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Price.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/RegularPrice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="972d8997-18a5-470f-8ba9-3ec98a729b06" name="Changes" comment="State 패턴을 이용해서&#10;Movied에서 가격 정보를 분리">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/price/Price.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/example/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/example/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/example/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/example/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/example/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/example/Rental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/ChildrenPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/price/ChildrenPrice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Rental.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch01/example/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/example/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch01/example/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/example/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch01/example/Rental.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/example/Rental.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch01/refactoring/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/refactoring/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ch01/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ch01/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/NewReleasePrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/price/NewReleasePrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Price.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/RegularPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/price/RegularPrice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,32 +39,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.32845187",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.32845187&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ch01.example" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ch01.refactoring.price" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ch01.refactoring" />
@@ -209,7 +203,8 @@
     <MESSAGE value="first Commit&#10;- 1장에 있는 예제 코드&#10;- 리팩터링 &#10;- 기존 코드의 문제점, HTML로 형식을 변환하거나 가격 계산 방식이 달라지면 비슷한 거를 또 만들어야한다!&#10;- 일단 단위화할 수 있는 부분을 찾자 -&gt; switch case 문을 함수로 만들어서 추출" />
     <MESSAGE value="기존 코드와 Refactoring 후의 코드가 같은 행동을 하는지 테스트 작성&#10;&#10;Customer.java&#10;-&gt; 자신의 정보를 바탕으로 totalCharge를 계산하는 질의 메서드&#10;-&gt; 자신의 정보를 바탕으로 totalFrequentRenterPoints를 계산하는 질의 메서드&#10;-&gt; totalAmount와 totalFrequent 라는 임시 변수 삭제&#10;-&gt; 자신의 정보를 활용하는 메서드를 짜든가, 아니라면 남에게 위임해야함(getCharge)" />
     <MESSAGE value="Rental.java에 있는 getCharge 메서드를 살펴봤을 때,Movie의 정보를 활용한다.&#10;남의 정보를 가지고 switch문의 인자로 사용하는 것은 좋지 않다.&#10;왜냐하면 남의 정보가 변경되면 switch문을 들고 있는 클래스까지 변경이 전파되기 때문임.&#10;따라서 daysRented를 인자로 넘기고 charge를 받는 것이 낫다.(정보 전문가에게 위임하자)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rental.java에 있는 getCharge 메서드를 살펴봤을 때,Movie의 정보를 활용한다.&#10;남의 정보를 가지고 switch문의 인자로 사용하는 것은 좋지 않다.&#10;왜냐하면 남의 정보가 변경되면 switch문을 들고 있는 클래스까지 변경이 전파되기 때문임.&#10;따라서 daysRented를 인자로 넘기고 charge를 받는 것이 낫다.(정보 전문가에게 위임하자)" />
+    <MESSAGE value="State 패턴을 이용해서&#10;Movied에서 가격 정보를 분리" />
+    <option name="LAST_COMMIT_MESSAGE" value="State 패턴을 이용해서&#10;Movied에서 가격 정보를 분리" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

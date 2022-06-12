@@ -1,5 +1,10 @@
 package ch01.refactoring;
 
+import ch01.refactoring.price.ChildrenPrice;
+import ch01.refactoring.price.NewReleasePrice;
+import ch01.refactoring.price.Price;
+import ch01.refactoring.price.RegularPrice;
+
 public class Movie {
     public static final int CHILDRENS = 2;
     public static final int REGULAR = 0;

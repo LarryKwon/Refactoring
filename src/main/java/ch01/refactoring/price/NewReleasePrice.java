@@ -1,18 +1,20 @@
-package ch01.refactoring;
+package ch01.refactoring.price;
+
+import ch01.refactoring.Movie;
 
 public class NewReleasePrice extends Price{
     @Override
-    int getPriceCode() {
+    public int getPriceCode() {
         return Movie.NEW_RELEASE;
     }
 
     @Override
-    double getCharge(int daysRented) {
+    public double getCharge(int daysRented) {
         return daysRented * 3;
     }
 
     @Override
-    int getFrequentRenterPoints(int daysRented) {
+    public int getFrequentRenterPoints(int daysRented) {
         return (daysRented > 1) ? 2: 1;
     }
 }
