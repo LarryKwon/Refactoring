@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="972d8997-18a5-470f-8ba9-3ec98a729b06" name="Changes" comment="State 패턴을 이용해서&#10;Movied에서 가격 정보를 분리">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/price/Price.java" afterDir="false" />
+    <list default="true" id="972d8997-18a5-470f-8ba9-3ec98a729b06" name="Changes" comment="price 폴더 생성 후 리팩토링">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empty.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/ch04/FileReaderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/ch04/data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/ChildrenPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/price/ChildrenPrice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/NewReleasePrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/price/NewReleasePrice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/Price.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch01/refactoring/RegularPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch01/refactoring/price/RegularPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Refactoring.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch01/example/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/example/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch01/example/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/example/Movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch01/example/Rental.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/example/Rental.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch01/refactoring/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch01/refactoring/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ch01/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ch01/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,29 +44,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.32845187&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.32845187",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ch01.example" />
@@ -73,66 +78,81 @@
       <recent name="ch01.refactoring" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Main.validRefacotor">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Refactoring" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FileReaderTest.testReadAfterClose">
+    <configuration name="FileReaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Refactoring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ch01.example.*" />
+          <option name="PATTERN" value="ch04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ch01.example" />
-      <option name="MAIN_CLASS_NAME" value="ch01.example.Main" />
+      <option name="PACKAGE_NAME" value="ch04" />
+      <option name="MAIN_CLASS_NAME" value="ch04.FileReaderTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main.test1 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileReaderTest.testEmptyRead" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Refactoring" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <option name="METHOD_NAME" value="test1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch04" />
+      <option name="MAIN_CLASS_NAME" value="ch04.FileReaderTest" />
+      <option name="METHOD_NAME" value="testEmptyRead" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileReaderTest.testReadAfterClose" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Refactoring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ch01.example.*" />
+          <option name="PATTERN" value="ch04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ch01.example" />
-      <option name="MAIN_CLASS_NAME" value="ch01.example.Main" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="PACKAGE_NAME" value="ch04" />
+      <option name="MAIN_CLASS_NAME" value="ch04.FileReaderTest" />
+      <option name="METHOD_NAME" value="testReadAfterClose" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main.validRefacotor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileReaderTest.testReadAtEnd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Refactoring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ch01.example.*" />
+          <option name="PATTERN" value="ch04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ch01.example" />
-      <option name="MAIN_CLASS_NAME" value="ch01.example.Main" />
-      <option name="METHOD_NAME" value="validRefacotor" />
+      <option name="PACKAGE_NAME" value="ch04" />
+      <option name="MAIN_CLASS_NAME" value="ch04.FileReaderTest" />
+      <option name="METHOD_NAME" value="testReadAtEnd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileReaderTest.testReadBoundaries" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Refactoring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch04" />
+      <option name="MAIN_CLASS_NAME" value="ch04.FileReaderTest" />
+      <option name="METHOD_NAME" value="testReadBoundaries" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,10 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Main.validRefacotor" />
-        <item itemvalue="JUnit.Main.test1" />
-        <item itemvalue="JUnit.Main.test1 (1)" />
-        <item itemvalue="JUnit.Main" />
+        <item itemvalue="JUnit.FileReaderTest.testReadAfterClose" />
+        <item itemvalue="JUnit.FileReaderTest" />
+        <item itemvalue="JUnit.FileReaderTest.testEmptyRead" />
+        <item itemvalue="JUnit.FileReaderTest.testReadBoundaries" />
+        <item itemvalue="JUnit.FileReaderTest.testReadAtEnd" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654996392177</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="price 폴더 생성 후 리팩토링">
+      <created>1655000757000</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655000757000</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +232,8 @@
     <MESSAGE value="기존 코드와 Refactoring 후의 코드가 같은 행동을 하는지 테스트 작성&#10;&#10;Customer.java&#10;-&gt; 자신의 정보를 바탕으로 totalCharge를 계산하는 질의 메서드&#10;-&gt; 자신의 정보를 바탕으로 totalFrequentRenterPoints를 계산하는 질의 메서드&#10;-&gt; totalAmount와 totalFrequent 라는 임시 변수 삭제&#10;-&gt; 자신의 정보를 활용하는 메서드를 짜든가, 아니라면 남에게 위임해야함(getCharge)" />
     <MESSAGE value="Rental.java에 있는 getCharge 메서드를 살펴봤을 때,Movie의 정보를 활용한다.&#10;남의 정보를 가지고 switch문의 인자로 사용하는 것은 좋지 않다.&#10;왜냐하면 남의 정보가 변경되면 switch문을 들고 있는 클래스까지 변경이 전파되기 때문임.&#10;따라서 daysRented를 인자로 넘기고 charge를 받는 것이 낫다.(정보 전문가에게 위임하자)" />
     <MESSAGE value="State 패턴을 이용해서&#10;Movied에서 가격 정보를 분리" />
-    <option name="LAST_COMMIT_MESSAGE" value="State 패턴을 이용해서&#10;Movied에서 가격 정보를 분리" />
+    <MESSAGE value="price 폴더 생성 후 리팩토링" />
+    <option name="LAST_COMMIT_MESSAGE" value="price 폴더 생성 후 리팩토링" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

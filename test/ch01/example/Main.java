@@ -15,38 +15,44 @@ public class Main {
 
     ch01.example.Customer before;
     Customer after;
-    Customer test3;
+    Movie beforeMovie1;
+    Movie beforeMovie2;
+    Movie beforeMovie3;
 
-    Movie movie1;
-    Movie movie2;
-    Movie movie3;
+    ch01.refactoring.Movie afterMovie1;
+    ch01.refactoring.Movie afterMovie2;
+    ch01.refactoring.Movie afterMovie3;
 
     @BeforeEach
      public void setup(){
 
-        movie1 = new Movie("movie1", 0);
-        movie2 = new Movie("movie2", 1);
-        movie3 = new Movie("movie3", 2);
+        beforeMovie1 = new Movie("movie1", 0);
+        beforeMovie2 = new Movie("movie2", 1);
+        beforeMovie3 = new Movie("movie3", 2);
+
+        afterMovie1 = new ch01.refactoring.Movie("movie1", 0);
+        afterMovie2 = new ch01.refactoring.Movie("movie2", 1);
+        afterMovie3 = new ch01.refactoring.Movie("movie3", 2);
     }
 
     @Test()
-    public void validRefacotor(){
+    public void validRefactor(){
         before = new ch01.example.Customer("test1");
         after = new Customer("test1");
 
         ArrayList<ch01.example.Rental> rentalsOfCustomer1 = new ArrayList<>();
-        rentalsOfCustomer1.add(new ch01.example.Rental(movie1, 3));
-        rentalsOfCustomer1.add(new ch01.example.Rental(movie2, 1));
-        rentalsOfCustomer1.add(new ch01.example.Rental(movie3, 2));
+        rentalsOfCustomer1.add(new ch01.example.Rental(beforeMovie1, 3));
+        rentalsOfCustomer1.add(new ch01.example.Rental(beforeMovie2, 1));
+        rentalsOfCustomer1.add(new ch01.example.Rental(beforeMovie3, 2));
 
         for (ch01.example.Rental rental : rentalsOfCustomer1) {
             before.addRental(rental);
         }
 
         ArrayList<Rental> rentalsOfCustomer2 = new ArrayList<>();
-        rentalsOfCustomer2.add(new Rental(movie1, 3));
-        rentalsOfCustomer2.add(new Rental(movie2, 1));
-        rentalsOfCustomer2.add(new Rental(movie3, 2));
+        rentalsOfCustomer2.add(new Rental(afterMovie1, 3));
+        rentalsOfCustomer2.add(new Rental(afterMovie2, 1));
+        rentalsOfCustomer2.add(new Rental(afterMovie3, 2));
         for (Rental rental : rentalsOfCustomer2) {
             after.addRental(rental);
         }
