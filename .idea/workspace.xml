@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="972d8997-18a5-470f-8ba9-3ec98a729b06" name="Changes" comment="메서드 추출 기법&#10;- 코드 뭉치를 잘라서 새로운 메서드로 만드는 것이다.&#10;- 가장 문제 되는 것은 지역 변수들임&#10;- 이 때, 지역변수가 읽히기만 하고 변경되지 않을 때는 새로 만드는 매서드의 매개변수로 전달.&#10;- 임시변수의 갑이 변경될 때도 있다.&#10;- 임시변수가 추출한 코드 내에서만 사용될 때, 기존 메서드에서 제거하고 새로운 메서드로 이동해서 사용하면 됨.&#10;- 그렇지 않다면 새로운 메서드에서 값을 반환해도록 변경해야함&#10;- 임시변수에 많은 일이 일어난다면 매개변수로 전달해내야한다.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch06/InlineMethod/InlineMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch06/InlineMethod/InlineMethod1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch06/ReplaceTempWithQuery/ReplaceTempWithQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch06/ReplaceTempWithQuery/ReplaceTempWithQuery1.java" afterDir="false" />
+    <list default="true" id="972d8997-18a5-470f-8ba9-3ec98a729b06" name="Changes" comment="메서드 내용 직접 삽입&#10;- 메서드 기능이 너무 단순해서 메서드명만 봐도 너무 뻔할 땐, 메서드를 합치자&#10;&#10;임시변수 내용 직접 삽입&#10;- 간단한 수식을 대입받는 임시변수로 인해 다른 리팩토링 기법 적용이 힘들 땐, 임시변수를 수식으로 고치자&#10;&#10;임시변수를 메서드 호출로 전환&#10;- 값이 한번만 대입되는 것들은 전부다 메서드 호출로 바꾸자.&#10;- 결국 값이 여러번 쓰여지고 변경되는 것은 하면 안된다.&#10;- 이럴 때는 임시변수를 여러 개로 분리 후에 이 기법을 적용">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch06/IntroduceExplainingVariable/IntroduceExplainingVariable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch06/IntroduceExplainingVariable/IntroduceExplaningVariable1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch06/IntroduceExplainingVariable/IntroduceExplaningVariable2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656260452707</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="메서드 내용 직접 삽입&#10;- 메서드 기능이 너무 단순해서 메서드명만 봐도 너무 뻔할 땐, 메서드를 합치자&#10;&#10;임시변수 내용 직접 삽입&#10;- 간단한 수식을 대입받는 임시변수로 인해 다른 리팩토링 기법 적용이 힘들 땐, 임시변수를 수식으로 고치자&#10;&#10;임시변수를 메서드 호출로 전환&#10;- 값이 한번만 대입되는 것들은 전부다 메서드 호출로 바꾸자.&#10;- 결국 값이 여러번 쓰여지고 변경되는 것은 하면 안된다.&#10;- 이럴 때는 임시변수를 여러 개로 분리 후에 이 기법을 적용">
+      <created>1656262763093</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656262763093</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +248,8 @@
     <MESSAGE value="price 폴더 생성 후 리팩토링" />
     <MESSAGE value="간단한 테스트 코드 작성법 학습" />
     <MESSAGE value="메서드 추출 기법&#10;- 코드 뭉치를 잘라서 새로운 메서드로 만드는 것이다.&#10;- 가장 문제 되는 것은 지역 변수들임&#10;- 이 때, 지역변수가 읽히기만 하고 변경되지 않을 때는 새로 만드는 매서드의 매개변수로 전달.&#10;- 임시변수의 갑이 변경될 때도 있다.&#10;- 임시변수가 추출한 코드 내에서만 사용될 때, 기존 메서드에서 제거하고 새로운 메서드로 이동해서 사용하면 됨.&#10;- 그렇지 않다면 새로운 메서드에서 값을 반환해도록 변경해야함&#10;- 임시변수에 많은 일이 일어난다면 매개변수로 전달해내야한다." />
-    <option name="LAST_COMMIT_MESSAGE" value="메서드 추출 기법&#10;- 코드 뭉치를 잘라서 새로운 메서드로 만드는 것이다.&#10;- 가장 문제 되는 것은 지역 변수들임&#10;- 이 때, 지역변수가 읽히기만 하고 변경되지 않을 때는 새로 만드는 매서드의 매개변수로 전달.&#10;- 임시변수의 갑이 변경될 때도 있다.&#10;- 임시변수가 추출한 코드 내에서만 사용될 때, 기존 메서드에서 제거하고 새로운 메서드로 이동해서 사용하면 됨.&#10;- 그렇지 않다면 새로운 메서드에서 값을 반환해도록 변경해야함&#10;- 임시변수에 많은 일이 일어난다면 매개변수로 전달해내야한다." />
+    <MESSAGE value="메서드 내용 직접 삽입&#10;- 메서드 기능이 너무 단순해서 메서드명만 봐도 너무 뻔할 땐, 메서드를 합치자&#10;&#10;임시변수 내용 직접 삽입&#10;- 간단한 수식을 대입받는 임시변수로 인해 다른 리팩토링 기법 적용이 힘들 땐, 임시변수를 수식으로 고치자&#10;&#10;임시변수를 메서드 호출로 전환&#10;- 값이 한번만 대입되는 것들은 전부다 메서드 호출로 바꾸자.&#10;- 결국 값이 여러번 쓰여지고 변경되는 것은 하면 안된다.&#10;- 이럴 때는 임시변수를 여러 개로 분리 후에 이 기법을 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="메서드 내용 직접 삽입&#10;- 메서드 기능이 너무 단순해서 메서드명만 봐도 너무 뻔할 땐, 메서드를 합치자&#10;&#10;임시변수 내용 직접 삽입&#10;- 간단한 수식을 대입받는 임시변수로 인해 다른 리팩토링 기법 적용이 힘들 땐, 임시변수를 수식으로 고치자&#10;&#10;임시변수를 메서드 호출로 전환&#10;- 값이 한번만 대입되는 것들은 전부다 메서드 호출로 바꾸자.&#10;- 결국 값이 여러번 쓰여지고 변경되는 것은 하면 안된다.&#10;- 이럴 때는 임시변수를 여러 개로 분리 후에 이 기법을 적용" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
