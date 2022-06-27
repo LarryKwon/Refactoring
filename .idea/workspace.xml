@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="972d8997-18a5-470f-8ba9-3ec98a729b06" name="Changes" comment="클래스 간 필드 이동&#10;- A 클래스의 필드가 B 클래스에 의해 많이 참조될 때, 필드 자체를 옮겨보자.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch07/ExtractClass/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch07/ExtractClass/refactoring/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch07/ExtractClass/refactoring/TelephoneNumber.java" afterDir="false" />
+    <list default="true" id="972d8997-18a5-470f-8ba9-3ec98a729b06" name="Changes" comment="클래스 추출하기&#10;- Person클래스에서 TelephoneNumber를 분리한다.&#10;- 고려해야할 점&#10;어떤 필드를 함께 옮길 것인가.&#10;어떤 메서드를 옮길 것인가">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch07/HideDelegate/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch07/HideDelegate/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch07/HideDelegate/refactoring/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch07/HideDelegate/refactoring/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656338110082</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="클래스 추출하기&#10;- Person클래스에서 TelephoneNumber를 분리한다.&#10;- 고려해야할 점&#10;어떤 필드를 함께 옮길 것인가.&#10;어떤 메서드를 옮길 것인가">
+      <created>1656339437401</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1656339437401</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +293,8 @@
     <MESSAGE value="메서드를 메서드 객체로 전환&#10;- 메서드 분해를 어렵게 만드는 것은 지역변수다. 지역변수가 많으면 메서드를 쪼개기 어렵다.&#10;- 계속 파라미터로 넘겨줘야하기 때문에, 서로 간에 의존성이 강해진다.&#10;- 차라리 아예 클래스로 분해하고, 지역변수를 클래스의 필드로 둔다.&#10;- 그러면 메서드를 쪼개기가 쉽다. 왜냐하면 지역변ㅅ가 아니니까, 클래스 필드니까" />
     <MESSAGE value="클래스 간 메서드 이동&#10;- 기능이 너무 많거나, 적합하게 분배되어있지 않을 때 실시&#10;- 한 클래스에서 다른 클래스의 메서드를 너무 많이 불러서 사용한다 싶을 때, 사용하는 방법&#10;- 특히 예제에는 새로운 유형의 계좌 유형이 포함될 수 있기에, overdraftCharge()의 책임을 AccountType에게 지우는 것이 맞다." />
     <MESSAGE value="클래스 간 필드 이동&#10;- A 클래스의 필드가 B 클래스에 의해 많이 참조될 때, 필드 자체를 옮겨보자." />
-    <option name="LAST_COMMIT_MESSAGE" value="클래스 간 필드 이동&#10;- A 클래스의 필드가 B 클래스에 의해 많이 참조될 때, 필드 자체를 옮겨보자." />
+    <MESSAGE value="클래스 추출하기&#10;- Person클래스에서 TelephoneNumber를 분리한다.&#10;- 고려해야할 점&#10;어떤 필드를 함께 옮길 것인가.&#10;어떤 메서드를 옮길 것인가" />
+    <option name="LAST_COMMIT_MESSAGE" value="클래스 추출하기&#10;- Person클래스에서 TelephoneNumber를 분리한다.&#10;- 고려해야할 점&#10;어떤 필드를 함께 옮길 것인가.&#10;어떤 메서드를 옮길 것인가" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
